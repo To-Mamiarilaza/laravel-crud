@@ -58,7 +58,7 @@ public class Table {
     // find not primary key column
     public List<Column> getAllColumnsWithoutPK() {
         List<Column> colWitoutPk = new ArrayList<>();
-        for (Column column : colWitoutPk) {
+        for (Column column : getColumns()) {
             if (!column.getIsPrimaryKey()) {
                 colWitoutPk.add(column);
             }

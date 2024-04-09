@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class #modelName# extends Model
+{
+    use HasFactory;
+
+    protected $table = '#tableName#';
+
+    public $timestamps = false;
+
+    public $primaryKey = '#primaryKeyName#';
+
+    protected $fillable = [#fields#];
+}
