@@ -149,7 +149,7 @@ public class DatabaseInformation {
         String urlPrefix = getDatabaseData().get("information").getAsJsonObject().get(this.type).getAsJsonObject().get("urlPrefix").getAsString();
         
         switch (getType()) {
-            case "postgresql":
+            case "pgsql":
                     Class.forName("org.postgresql.Driver");
                 break;
 

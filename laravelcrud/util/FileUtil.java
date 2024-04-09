@@ -13,6 +13,8 @@ import java.io.InputStreamReader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -103,5 +105,22 @@ public class FileUtil {
 
         // Supprime le dossier une fois que son contenu a été supprimé
         dossier.delete();
+    }
+
+    public static String getFirstLineWith(String origin, String target) {
+        List<String> targetLines = new ArrayList<>();
+        String[] lines = origin.split("\n");
+
+        for (String line : lines) {
+            if (line.contains(target)) {
+                targetLines.add(line);
+            }
+        }
+
+        if (targetLines.size() != 0) {
+            return targetLines.get(0).trim();
+        }
+
+        return null;
     }
 }
